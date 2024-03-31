@@ -1,0 +1,25 @@
+@use '/src/scss/components/globalVariabel' as globalVariabel;
+@use '/src/scss/components/navbar' as navbar;
+@use '/src/scss/components/jumbotron' as jumbotron;
+@use '/src/scss/components/contentArticle' as cntentArticle;
+@use '/src/scss/components/aside' as aside;
+@use '/src/scss/components/footer' as footer;
+@use '/src/scss/components/buttonToTop' as buttonToTop;
+
+@use '/src/scss/responsive/tablet' as responsiveTablet;
+@use '/src/scss/responsive/mobile.scss' as responsiveMobile;
+
+
+*,
+*::before,
+*,::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+

@@ -1,0 +1,103 @@
+@use 'globalVariabel' as globalVariabel;
+
+
+main {
+  .section {
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    padding: 1rem;
+    display: flex;
+    gap: 20px;
+
+    .article-title {
+      font-size: 3rem;
+      margin: 50px 0 20px;
+      font-weight: 700;
+    }
+
+    .article-category {
+      font-weight: 400;
+      font-size: 1.5rem;
+      margin-bottom: 70px;
+    }
+
+    .article-container {
+      .cards {
+        max-width: 100%;
+        margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        gap: 60px 20px;
+
+        .card {
+          border-radius: 20px;
+          transition: 0.3s;
+
+          a {
+            text-decoration: none;
+            color: globalVariabel.$dark-900;
+          }
+
+          &:hover {
+            box-shadow: rgba(149, 157, 165, 0.15) 0px 8px 20px;
+          }
+
+          &:active {
+            background-color: rgb(250, 250, 250);
+          }
+
+          .image-card {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+
+            img {
+              border-radius: 25px;
+              background-position: center;
+              background-repeat: no-repeat;
+              object-fit: cover;
+              background-size: cover;
+              object-position: center;
+              width: 100%;
+            }
+          }
+
+          .taggs {
+            display: flex;
+            column-gap: 10px;
+            padding: 0 10px;
+
+            .tagg-item {
+              border-radius: 10px;
+              background-color: globalVariabel.$dark-900;
+              color: globalVariabel.$light;
+              font-size: 0.8rem;
+              padding: 5px 10px;
+            }
+          }
+
+          .card-title,
+          .card-content,
+          .date {
+            padding: 0 10px;
+          }
+
+          .card-title {
+            margin: 20px 0;
+            font-weight: 500;
+            font-size: 1.2rem;
+          }
+
+          .card-content {
+            line-height: 1.7;
+          }
+
+          .date {
+            margin: 20px 0;
+          }
+        }
+      }
+    }
+  }
+}

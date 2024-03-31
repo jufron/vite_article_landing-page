@@ -1,0 +1,91 @@
+@use '../components/globalVariabel' as globalVariabel;
+
+
+// * tablet screen
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+  header {
+    .navbar-container {
+      width: 90%;
+
+      .navbar-items-menu,
+      .navbar-items-auth {
+        a {
+          padding: 2rem 1.4rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  main {
+    .content {
+      .jumbotron {
+        margin-top: -110px;
+
+        .content-description {
+          width: 90%;
+
+          .title {
+            font-size: 2.8rem;
+          }
+
+          p {
+            font-size: 1.1rem;
+            padding-top: 1rem;
+          }
+
+          .form-input {
+            width: 500px;
+          }
+
+          .button-search {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+
+    .article-content {
+      width: 90%;
+  
+      .article-title {
+        font-size: 2.8rem;
+      }
+  
+      .article-category {
+        font-size: 1.2rem;
+      }
+    }
+
+    .content {
+      .section {
+        max-width: 90%;
+      }
+    
+      .article-container {
+        .cards {
+          margin-bottom: 40px;
+          grid-template-columns: repeat(2, minmax(100px, 1fr));
+          gap: 60px 10px;
+        }
+      }
+    }
+  }
+
+  footer {
+    .footer-container {
+      width: 90%;
+      margin: auto;
+      padding: 4rem 1rem 2rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      gap: 50px 30px;
+    }
+
+    .footer-container .footer-social-media-and-download-app .footer-social-media-items {
+      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+  }
+
+}

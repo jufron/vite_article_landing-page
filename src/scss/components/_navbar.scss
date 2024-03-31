@@ -1,0 +1,116 @@
+@use 'globalVariabel' as globalVariabel;
+
+
+header {
+  transition: 0.1s;
+  margin-top: 20px;
+
+  &.navbar-sticky {
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: globalVariabel.$dark;
+    z-index: 1000;
+  }
+
+  .navbar-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar-brand a {
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: globalVariabel.$light;
+      font-weight: 700;
+    }
+
+    .navbar-items-menu,
+    .navbar-items-auth {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      text-align: center;
+
+      li {
+        list-style-type: none;
+      }
+
+      .item-menu:nth-child(2) {
+        border-bottom: 2px solid globalVariabel.$dark-900;
+      }
+
+      a {
+        color: globalVariabel.$light;
+        text-decoration: none;
+        display: block;
+        padding: 1.6rem;
+        font-size: 1.2rem;
+        transition: 0.5s ease-in-out;
+      }
+
+      .button a {
+        background-color: globalVariabel.$dark-600;
+
+        &:hover {
+          background-color: globalVariabel.$dark-900;
+        }
+      }
+
+      a:hover {
+        border-bottom: 2px solid globalVariabel.$dark-900;
+        font-weight: bold;
+      }
+    }
+
+    // ? hamburger menu
+    .hamburger-menu {
+      display: none;
+      cursor: pointer;
+
+      .hamburger-item {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background-color: #0e2431; // Use color keyword instead of hex
+
+        &:nth-child(1) {
+          transform-origin: 0 0;
+          transition: transform 0.4s ease-in-out;
+        }
+
+        &:nth-child(2) {
+          transition: transform 0.2s ease-in-out;
+        }
+
+        &:nth-child(3) {
+          transform-origin: 0 100%;
+          transition: transform 0.4s ease-in-out;
+        }
+
+        &.active {
+          transform: translateX(0);
+
+          &:nth-child(1) {
+            transform: rotate(49deg);
+          }
+
+          &:nth-child(2) {
+            transform: scaleY(0);
+          }
+
+          &:nth-child(3) {
+            transform: rotate(-49deg);
+          }
+        }
+      }
+    }
+
+  }
+}
+

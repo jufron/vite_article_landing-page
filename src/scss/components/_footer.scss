@@ -1,0 +1,147 @@
+@use 'globalVariabel' as globalVariabel;
+
+
+footer {
+  background-color: globalVariabel.$super-dark;
+
+  .footer-container {
+    color: globalVariabel.$light;
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    padding: 4rem 1rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    column-gap: 40px;
+
+    .footer-subscribe {
+      .footer-brand {
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+        font-weight: 700;
+
+        a {
+          text-decoration: none;
+          color: globalVariabel.$light;
+          transition: 0.5s;
+
+          &:hover {
+            color: globalVariabel.$dark-900;
+          }
+        }
+      }
+
+      .footer-content {
+        line-height: 2;
+        margin-bottom: 40px;
+      }
+
+      .footer-form-subscribe {
+        display: flex;
+        flex-direction: column;
+
+        .footer-form-input {
+          padding: 0.8rem;
+          border-radius: 10px;
+          outline: none;
+          border-style: none;
+          margin-bottom: 30px;
+          font-size: 1rem;
+        }
+
+        .footer-form-button {
+          width: 100px;
+          padding: 0.9rem;
+          border-radius: 10px;
+          background-color: globalVariabel.$dark-600;
+          color: globalVariabel.$light;
+          border-style: none;
+          transition: 0.4s ease-in-out;
+          cursor: pointer;
+
+          &:hover {
+            background-color: globalVariabel.$dark-900;
+          }
+        }
+      }
+    }
+
+    .footer-link,
+    .footer-category {
+      padding: 0 1.5rem;
+
+      .footer-header {
+        margin-bottom: 40px;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      .footer-item-menu {
+        list-style: none;
+        margin-bottom: 30px;
+      }
+    }
+
+    a {
+      color: globalVariabel.$light;
+      text-decoration: none;
+      transition: 0.5s;
+
+      &:hover {
+        color: globalVariabel.$dark-900;
+      }
+    }
+
+    .footer-social-media-and-download-app {
+
+      .footer-header {
+        margin-bottom: 40px;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      .footer-social-media-items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        gap: 15px 10px;
+
+        .footer-item-social-media {
+          padding: 10px 20px;
+          border: 1px solid rgba(255, 253, 253, 0.107);
+          margin: auto;
+          font-size: 1.2rem;
+          border-radius: 10px;
+          transition: 0.5s;
+
+          &:hover {
+            border: 1px solid rgba(255, 253, 253, 0.492);
+          }
+        }
+      }
+
+      .download-app {
+        margin-top: 20px;
+
+        .download-app-information {
+          line-height: 2;
+        }
+
+        img {
+          display: block;
+          width: 200px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.copyright-container {
+  background-color: globalVariabel.$dark-600;
+  padding: 1rem 0;
+  color: globalVariabel.$light;
+
+  #copyright-text {
+    text-align: center;
+  }
+}

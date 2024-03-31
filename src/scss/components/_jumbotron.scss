@@ -1,0 +1,70 @@
+@use 'globalVariabel' as globalVariabel;
+
+main {
+  .content {
+    .jumbotron {
+      margin-top: -120px;
+      background-image: url('/src/img/poster3.jpg');
+      background-color: globalVariabel.$dark-300;
+      object-fit: cover;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      object-position: center;
+
+      .content-description {
+        padding: 100px 0;
+        width: 100%;
+        margin: auto;
+        max-width: 1200px;
+        color: globalVariabel.$light;
+
+        .title {
+          font-size: 3rem;
+          font-weight: 700;
+          margin-top: 60px;
+          padding: 2.5rem 1rem;
+        }
+
+        p {
+          padding: 1rem;
+          font-size: 1.2rem;
+          width: 600px;
+          line-height: 2.7;
+          margin-bottom: 20px;
+        }
+
+        .form {
+          padding: 0 1rem;
+          display: flex;
+          gap: 0 10px;
+        }
+
+        .form-input {
+          width: 700px;
+          padding: 1.2rem;
+          font-size: 1.3rem;
+          border-radius: 10px;
+          outline: none;
+          border: 1px solid globalVariabel.$dark-300;
+        }
+
+        .button-search {
+          display: block;
+          padding: 1.2rem 2rem;
+          border: none;
+          font-size: 1.3rem;
+          cursor: pointer;
+          border-radius: 10px;
+          background-color: globalVariabel.$dark-600;
+          color: globalVariabel.$light;
+          transition: background-color 0.3s ease-in-out;
+
+          &:hover {
+            background-color: globalVariabel.$dark-900;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@use 'globalVariabel' as globalVariabel;
+
+
+.to-top {
+  display: none;
+  color: globalVariabel.$light;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: globalVariabel.$dark-900;
+  width: 60px;
+  font-size: 1.3rem;
+  height: 60px;
+  position: fixed;
+  bottom: 35px;
+  right: 40px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.to-top.active {
+  display: flex;
+}
